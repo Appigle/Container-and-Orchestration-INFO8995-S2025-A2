@@ -1,0 +1,75 @@
+Assignment #2: Advance Containers
+
+Hide Assignment Information
+Instructions
+Assignment: Advance Containers (15%)
+Overview:
+This assignment is designed to test your knowledge and skills in containerization using Docker. You will be working with various aspects of Docker, including volumes, networking, security, and load balancing. You will also be required to apply best practices for setting up a scalable and secure system using Docker containers.
+
+Instructions:
+Complete all tasks in this assignment.
+Submit your Dockerfiles, configuration files, scripts, and documentation as part of your solution.
+Use docker-compose to orchestrate your containers where appropriate.
+You will be evaluated on both functionality and best practices (security, optimization, scalability).
+Problem Statement:
+You are a DevOps Engineer in a team with other fellow Software Developers & QA Engineers, and tasked with setting up a containerized web application that serves a simple API and stores user data. This application will use a database (Your choice) for data persistence, and you will need to ensure the system is scalable, secure, and fault-tolerant.
+
+Requirements:
+
+Web Application (API Server):
+
+You will implement a simple web application that exposes an API endpoint to create and fetch user data (e.g., POST /user and GET /user/{id}).
+This web application will be written in any language or framework of your choice (Node.js, Python, Ruby, etc.).
+The application will log basic data (such as requests and responses) to a local file inside the container.
+Database Container:
+
+Set up a containerized MySQL/PostgreSQL database to store user data. You need to configure the database to store user information securely.
+Ensure the database is initialized with a user table when the container starts. The user table can simply contain ID and First/Last Name field(s).
+Volumes:
+
+Use Docker Volumes for database storage to ensure data persists between container restarts.
+Networking:
+
+Create a Docker network to allow communication between your web application container and the database container.
+Ensure the web application is able to connect to the database using appropriate credentials.
+Cloudflare access from outside the school (Optional/BONUS):
+
+Your web application should be capable of being reached from the public internet.
+Use the youtube video above and a free cloudflare account to publish your assignment.
+Security Best Practices:
+
+Implement basic security best practices for your Docker containers (e.g., run containers as non-root users, minimize the image size, avoid unnecessary privileges, use environment variables for secrets).
+The database container should have appropriate authentication in place.
+Docker Compose:
+
+Use Docker Compose to orchestrate the application and database containers.
+Your docker-compose.yml file should define:
+The web application container.
+The database container.
+The network configuration.
+Documentation:
+
+Write a README file that:
+Describes how to build, configure, and run your containers.
+Explains the purpose of each Docker configuration, including the Dockerfile, docker-compose.yml, and any other related scripts.
+Outlines the scaling and load balancing setup and security measures. (Optional/BONUS)
+Deliverables:
+Dockerfile for the web application.
+docker-compose.yml to set up the containers and services.
+Any configuration files for your web application, database, or reverse proxy (Optional/Bonus).
+README.md with detailed instructions on how to run the system, scale the containers, and manage the environment.
+Sample test data and instructions for testing the API endpoints.
+Evaluation Criteria:
+Correctness (50%):
+
+The web application and database containers should function correctly and meet all specified requirements.
+The scaling of web application containers and load balancing setup should work as expected.
+Security Best Practices (20%):
+
+Secure configuration of the web application, database, and Docker containers (e.g., use of least-privilege, proper image size reduction, secrets management, secure networking).
+Docker and Networking Knowledge (20%):
+
+Proper use of Docker volumes, and networking to facilitate container communication and persistence.
+Documentation (10%):
+
+Clear, well-organized documentation that explains the setup and usage of the system.
