@@ -1,0 +1,5 @@
+2025-06-12 10:15:23,456 INFO POST /user - Created: {'id': 1, 'first_name': 'Alice', 'last_name': 'Smith'}
+2025-06-12 10:15:25,789 INFO GET /user/1 - Found: {'id': 1, 'first_name': 'Alice', 'last_name': 'Smith'}
+2025-06-12 10:16:10,123 INFO POST /user - Missing fields: {'first_name': 'Bob'}
+2025-06-12 10:16:12,456 INFO GET /user/2 - Not found
+2025-06-12 10:17:05,321 ERROR POST /user - DB Error: Duplicate entry '1' for key 'PRIMARY' 
